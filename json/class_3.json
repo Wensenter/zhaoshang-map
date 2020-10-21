@@ -1,0 +1,72 @@
+{
+    "mapCenter":{"lng": 108.313555,"lat": 22.877456},
+    "viewclass": 3,
+    "data":[
+            {
+                "data":{
+                    "title":"会展湾东城广场一期",
+                    "name":"会展湾东城广场一期",
+                    "cityName":"深圳市",
+                    "CameraNum":24,
+                    "companyName":"深圳公司",
+                    "sitetype": "mall"
+                }
+            },
+            {
+                "data":{
+                    "title":"招商雍华府",
+                    "name":"招商雍华府",
+                    "cityName":"东莞市",
+                    "CameraNum":24,
+                    "companyName":"深圳公司",
+                    "sitetype": "construction"
+                }
+            },
+            {
+                "data":{
+                    "title":"招商雍景湾",
+                    "name":"招商雍景湾",
+                    "cityName":"东莞市",
+                    "CameraNum":24,
+                    "companyName":"深圳公司",
+                    "sitetype":"community"
+                }
+            },
+            {
+                "point":{"lng": 117.321915,"lat": 31.890172},
+                "data":{
+                    "title":"xxxxx商城",
+                    "CameraNum":10,
+                    "companyName":"武汉公司",
+                    "sitetype":"office"
+                }
+            },
+            {
+                "point":{"lng": 114.276579,"lat": 30.594136},
+                "data":{
+                    "title":"xxxxx商城",
+                    "CameraNum":10,
+                    "companyName":"武汉公司",
+                    "sitetype":"other"
+                }
+            },
+            {
+                "point":{"lng": 112.945074,"lat": 28.23603},
+                "data":{
+                    "title":"xxxxx商城",
+                    "CameraNum":10,
+                    "companyName":"武汉公司",
+                    "sitetype":"community"
+                }
+            },
+            {
+                "point":{"lng": 108.313555,"lat": 22.877456},
+                "data":{
+                    "title":"xxxxx商城",
+                    "CameraNum":10,
+                    "companyName":"武汉公司",
+                    "sitetype":"community"
+                }
+            }
+        ]
+}

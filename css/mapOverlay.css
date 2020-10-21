@@ -1,0 +1,323 @@
+.cardWrap,
+.projectWrap {
+  position: absolute;
+  font-size: 16px;
+  cursor: pointer;
+}
+.cardWrap .pointPic,
+.projectWrap .pointPic {
+  width: 40px;
+  height: 40px;
+}
+.cardWrap >h3,
+.projectWrap >h3 {
+  font-size: 16px;
+  font-family: "Source Han Sans CN";
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+}
+.cardWrap .project-info-box,
+.projectWrap .project-info-box {
+  width: 235px;
+  height: 170px;
+  box-sizing: border-box;
+  border: 1px solid #29abe2;
+  background: #005f9e;
+  position: absolute;
+  bottom: 60px;
+  padding: 15px 20px 20px 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  opacity: 0.9;
+  display: none;
+  z-index: 1001;
+}
+.cardWrap .project-info-box:after,
+.projectWrap .project-info-box:after {
+  content: '';
+  width: 18px;
+  height: 15px;
+  background: url("../img/corner.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 18px;
+  bottom: -15px;
+}
+.cardWrap .project-info-box h5,
+.projectWrap .project-info-box h5 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 20px;
+  font-weight: bold;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #0567a4;
+}
+.cardWrap .project-info-box h5 span,
+.projectWrap .project-info-box h5 span {
+  float: right;
+  font-size: 18px;
+}
+.cardWrap .project-info-box ul,
+.projectWrap .project-info-box ul {
+  width: 100%;
+  margin-top: 15px;
+}
+.cardWrap .project-info-box ul li,
+.projectWrap .project-info-box ul li {
+  display: inline-block;
+  width: calc(100% / 2 - 12px);
+  margin-bottom: 10px;
+}
+.cardWrap .project-info-box ul li .info-icon,
+.projectWrap .project-info-box ul li .info-icon {
+  vertical-align: middle;
+}
+.cardWrap .project-info-box ul li .info-text,
+.projectWrap .project-info-box ul li .info-text {
+  font-size: 14px;
+  color: #56b1f2;
+  margin-left: 8px;
+  margin-right: 10px;
+}
+.cardWrap .project-info-box ul li .info-num,
+.projectWrap .project-info-box ul li .info-num {
+  font-size: 16px;
+  color: #fff;
+}
+.cardWrap .project-info-box ul li:nth-child(2n),
+.projectWrap .project-info-box ul li:nth-child(2n) {
+  margin-left: 24px;
+}
+.cardWrap .screen_info_box,
+.projectWrap .screen_info_box {
+  width: 175px;
+  height: 55px;
+  box-sizing: border-box;
+  border: 1px solid #29abe2;
+  background: #005f9e;
+  position: absolute;
+  bottom: 60px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  opacity: 0.9;
+  font-size: 0;
+  display: none;
+}
+.cardWrap .screen_info_box:before,
+.projectWrap .screen_info_box:before {
+  content: '';
+  width: 18px;
+  height: 15px;
+  background: url("../img/corner.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 18px;
+  bottom: -15px;
+}
+.cardWrap .screen_info_box .info_pic,
+.projectWrap .screen_info_box .info_pic {
+  margin-right: 15px;
+}
+.cardWrap .screen_info_box >span,
+.projectWrap .screen_info_box >span {
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+}
+.cardWrap .screen_info_box .info_num,
+.projectWrap .screen_info_box .info_num {
+  float: right;
+  font-size: 22px;
+  font-family: "DINPro";
+  margin-bottom: 5px;
+}
+.cardWrap .screen_info_box .info_name,
+.projectWrap .screen_info_box .info_name {
+  font-size: 16px;
+  font-family: "Alibaba Sans";
+  vertical-align: text-bottom;
+}
+.cardWrap .camera-info-box,
+.projectWrap .camera-info-box {
+  width: 205px;
+  height: 78px;
+  box-sizing: border-box;
+  border: 1px solid #29abe2;
+  background: #005f9e;
+  position: absolute;
+  bottom: 60px;
+  padding: 15px 15px 0 15px;
+  display: none;
+  opacity: 0.9;
+  z-index: 1001;
+}
+.cardWrap .camera-info-box:before,
+.projectWrap .camera-info-box:before {
+  content: '';
+  width: 18px;
+  height: 15px;
+  background: url("../img/corner.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 18px;
+  bottom: -15px;
+}
+.cardWrap .camera-info-box >img,
+.projectWrap .camera-info-box >img {
+  float: left;
+}
+.cardWrap .camera-info-box .left-box,
+.projectWrap .camera-info-box .left-box {
+  float: right;
+  width: calc(100% - 45px);
+}
+.cardWrap .camera-info-box .left-box h5,
+.projectWrap .camera-info-box .left-box h5 {
+  padding-bottom: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Alibaba Sans";
+  font-weight: bold;
+  border-bottom: 1px solid rgba(41,171,226,0.2);
+}
+.cardWrap .camera-info-box .left-box h5 >span,
+.projectWrap .camera-info-box .left-box h5 >span {
+  float: right;
+  font-size: 22px;
+  font-family: "DINPro";
+  font-weight: bold;
+  line-height: 22px;
+}
+.cardWrap .camera-info-box .left-box .companyName,
+.projectWrap .camera-info-box .left-box .companyName {
+  padding-top: 5px;
+  margin-bottom: 15px;
+  color: #29abe2;
+  font-size: 14px;
+  font-family: "Noto Sans SC";
+}
+.projectWrap {
+  cursor: move !important;
+}
+.cardWrap.active .pointPic {
+  transform: scale(1.25);
+  transition: scale 0.5s;
+}
+.cardWrap.active .screen_info_box {
+  display: block;
+}
+.cardWrap.active .project-info-box {
+  display: block;
+}
+.cardWrap.active .camera-info-box {
+  display: block;
+}
+.addVideoWrap,
+.videoWrap {
+  position: absolute;
+  border-radius: 20px;
+  background: #3fa9f5;
+  box-shadow: 1px 6px 5px rgba(0,0,0,0.35);
+  padding: 10px;
+  font-size: 0;
+  cursor: pointer;
+}
+.addVideoWrap .pointPic,
+.videoWrap .pointPic {
+  width: 20px;
+  height: 20px;
+}
+.addVideoWrap .pointTitle,
+.videoWrap .pointTitle {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+}
+.addVideoWrap {
+  cursor: move !important;
+}
+.videoWrap .single-camera-info-box {
+  z-index: 1001;
+  position: absolute;
+  bottom: 60px;
+  width: 190px;
+  box-sizing: border-box;
+  border: 1px solid #07d3e6;
+  background: #005f9e;
+  display: none;
+  font-size: 16px;
+  font-family: "Alibaba Sans";
+  padding: 15px 35px 15px 20px;
+  color: #fff;
+  opacity: 0.9;
+}
+.videoWrap .single-camera-info-box:before {
+  content: '';
+  width: 18px;
+  height: 15px;
+  background: url("../img/corner.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 18px;
+  bottom: -15px;
+}
+.videoWrap .pointTitle {
+  display: none;
+}
+.videoWrap.active .single-camera-info-box {
+  display: block;
+}
+.mergeVideoCard {
+  position: absolute;
+  height: 40px;
+  line-height: 40px;
+  background: #3fa9f5;
+  border-radius: 20px;
+  box-shadow: 1px 6px 5px rgba(0,0,0,0.35);
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  color: #fff;
+  font-weight: 600;
+}
+.mergeVideoCard img {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.mergeProjectCard {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+}
+.mergeProjectCard .merge-project-pic {
+  width: 62px;
+  height: 62px;
+  line-height: 62px;
+  font-size: 16px;
+  text-align: center;
+  color: #2b3f99;
+  background: url("../img/icon_pnt_withtxt.png") no-repeat;
+  background-size: 100% 100%;
+  font-weight: 600;
+  margin: 0 auto;
+}
+.mergeProjectCard span {
+  color: #fff;
+  font-size: 18px;
+  font-family: "Source Han Sans CN";
+  display: inline-block;
+  width: 80px;
+}

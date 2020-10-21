@@ -1,0 +1,253 @@
+.cardWrap,.projectWrap
+    position absolute
+    font-size 16px
+    cursor pointer
+    .pointPic
+        width 40px
+        height 40px
+    >h3
+        font-size 16px
+        font-family "Source Han Sans CN"
+        width 100px
+        position absolute
+        left 50%
+        transform translateX(-50%)
+        text-align center
+        color #fff
+    .project-info-box
+        width 235px
+        height 170px
+        box-sizing border-box
+        border 1px solid #29ABE2
+        background #005F9E
+        position absolute
+        bottom 60px
+        padding 15px 20px 20px 20px
+        box-shadow 0 0 15px rgba(0,0,0,.5)
+        opacity 0.9
+        display none
+        z-index 1001
+        &:after
+            content ''
+            width 18px
+            height 15px
+            background url('../img/corner.png') no-repeat
+            background-size 100% 100%
+            position absolute
+            left 18px
+            bottom -15px
+        h5
+            font-size 14px
+            font-weight 500
+            color #fff
+            line-height 20px
+            font-weight bold
+            padding-bottom 15px
+            border-bottom 1px solid #0567A4
+            span
+                float right
+                font-size 18px
+        ul
+            width 100%
+            margin-top 15px
+            li
+                display inline-block
+                width calc(100% / 2 - 12px)
+                margin-bottom 10px
+                .info-icon
+                    vertical-align middle
+                .info-text
+                    font-size 14px
+                    color #56B1F2
+                    margin-left 8px
+                    margin-right 10px
+                .info-num
+                    font-size 16px
+                    color #fff
+                &:nth-child(2n)
+                    margin-left 24px
+    .screen_info_box
+        width 175px
+        height 55px
+        box-sizing border-box
+        border 1px solid #29ABE2
+        background #005F9E
+        position absolute
+        bottom 60px
+        padding 15px
+        box-shadow 0 0 15px rgba(0,0,0,.5)
+        opacity 0.9
+        font-size 0
+        display none
+        &:before
+            content ''
+            width 18px
+            height 15px
+            background url('../img/corner.png') no-repeat
+            background-size 100% 100%
+            position absolute
+            left 18px
+            bottom -15px
+        .info_pic
+            margin-right 15px
+        >span
+            display inline-block
+            color #fff
+            font-weight bold
+        .info_num
+            float right
+            font-size 22px
+            font-family "DINPro"
+            margin-bottom 5px
+        .info_name
+            font-size 16px
+            font-family "Alibaba Sans"
+            vertical-align text-bottom
+    .camera-info-box
+        width 205px
+        height 78px
+        box-sizing border-box
+        border 1px solid #29ABE2
+        background #005F9E
+        position absolute
+        bottom 60px
+        padding 15px 15px 0 15px
+        display none
+        opacity 0.9
+        z-index 1001
+        &:before
+            content ''
+            width 18px
+            height 15px
+            background url('../img/corner.png') no-repeat
+            background-size 100% 100%
+            position absolute
+            left 18px
+            bottom -15px
+        >img
+            float left
+        .left-box
+            float right
+            width calc(100% - 45px)
+            h5
+                padding-bottom 5px
+                color #fff
+                font-size 16px
+                font-family "Alibaba Sans"
+                font-weight bold
+                border-bottom 1px solid rgba(41,171,226,.2)
+                >span
+                    float right
+                    font-size 22px
+                    font-family "DINPro"
+                    font-weight bold
+                    line-height 22px
+            .companyName
+                padding-top 5px
+                margin-bottom 15px
+                color #29ABE2
+                font-size 14px
+                font-family "Noto Sans SC"
+.projectWrap
+    cursor move !important
+.cardWrap.active
+    .pointPic
+        transform scale(5/4)
+        transition scale 0.5s
+    .screen_info_box
+        display block
+    .project-info-box
+        display block
+    .camera-info-box
+        display block
+.addVideoWrap,.videoWrap
+    position absolute
+    border-radius 20px
+    background #3FA9F5
+    box-shadow 1px 6px 5px rgba(0,0,0,.35)
+    padding 10px
+    font-size 0
+    cursor pointer
+    .pointPic
+        width 20px
+        height 20px
+    .pointTitle
+        position absolute
+        bottom -20px
+        left 50%
+        transform translateX(-50%)
+        font-size 12px
+        color #fff
+        white-space nowrap
+        text-align center
+.addVideoWrap
+    cursor move !important
+.videoWrap
+    .single-camera-info-box
+        z-index 1001
+        position absolute
+        bottom 60px
+        width 190px
+        box-sizing border-box
+        border 1px solid #07D3E6
+        background #005F9E
+        display none
+        font-size 16px
+        font-family "Alibaba Sans"
+        padding 15px 35px 15px 20px
+        color #fff
+        opacity 0.9
+        &:before
+            content ''
+            width 18px
+            height 15px
+            background url('../img/corner.png') no-repeat
+            background-size 100% 100%
+            position absolute
+            left 18px
+            bottom -15px
+    .pointTitle
+        display none
+.videoWrap.active
+    .single-camera-info-box
+        display block
+.mergeVideoCard
+    position absolute
+    height 40px
+    line-height 40px
+    background #3FA9F5
+    border-radius 20px
+    box-shadow 1px 6px 5px rgba(0,0,0,.35)
+    cursor pointer
+    font-size 16px
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    color #fff
+    font-weight 600
+    img
+        width 25px
+        height 25px
+        vertical-align middle
+        margin-right 10px
+.mergeProjectCard
+    position absolute
+    text-align center
+    cursor pointer
+    .merge-project-pic
+        width 62px
+        height 62px
+        line-height 62px
+        font-size 16px
+        text-align center
+        color #2B3F99
+        background url('../img/icon_pnt_withtxt.png') no-repeat
+        background-size 100% 100%
+        font-weight 600
+        margin 0 auto
+    span
+        color #fff
+        font-size 18px
+        font-family "Source Han Sans CN"
+        display inline-block
+        width 80px

@@ -1,0 +1,96 @@
+{
+    "mapCenter":{"lng": 112.945074,"lat": 28.23603},
+    "viewclass":1,
+    "data":[
+      {
+        "point":{"lng": 125.684555,"lat": 43.855417},
+        "data":{
+            "title":"华北区域",
+            "plist":["天津","黑龙江","辽宁","吉林","北京"],
+            "projectSum":16,
+            "projectInfoList":[
+                {
+                    "projectName": "mall",
+                    "projectNum": 17
+                },
+                {
+                    "projectName": "construct",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "office",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "community",
+                    "projectNum": 1 
+                },
+                {
+                    "projectName": "other",
+                    "projectNum": 3 
+                }
+            ]
+        }
+      },
+      {
+        "point":{"lng": 113.910285,"lat": 34.057525},
+        "data":{
+            "title":"华中区域",
+            "plist":["湖北","河南","山东","湖北"],
+            "projectSum":16,
+            "projectInfoList":[
+                {
+                    "projectName": "mall",
+                    "projectNum": 17
+                },
+                {
+                    "projectName": "construct",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "office",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "community",
+                    "projectNum": 1 
+                },
+                {
+                    "projectName": "other",
+                    "projectNum": 3 
+                }
+            ]
+        }
+      },
+      {
+        "point":{"lng": 118.693582,"lat": 32.200036},
+        "data":{
+            "title":"华南区域",
+            "plist":["江苏","安徽"],
+            "projectSum":16,
+            "projectInfoList":[
+                {
+                    "projectName": "mall",
+                    "projectNum": 17
+                },
+                {
+                    "projectName": "construct",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "office",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "community",
+                    "projectNum": 1 
+                },
+                {
+                    "projectName": "other",
+                    "projectNum": 3 
+                }
+            ]
+        }
+      }
+    ]
+  }

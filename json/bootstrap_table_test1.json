@@ -1,0 +1,19 @@
+[{
+	"modelName": "首页",
+	"paramName": "播放频率（秒）",
+	"key": "rate",
+	"value": "10",
+	"op": "<a class='m-r-sm' title='编辑' href='sys_MGMT_addedit.html'><i class='icon at at_edit'></i></a><a class='demo4 m-r-sm text-danger' href='#' title='删除'><i class='icon at at_del'></i></a>"
+}, {
+	"modelName": "首页",
+	"paramName": "播放频率（秒）",
+	"key": "rate",
+	"value": "10",
+	"op": "<a class='m-r-sm' title='编辑' href='sys_MGMT_addedit.html'><i class='icon at at_edit'></i></a><a class='demo4 m-r-sm text-danger' href='#' title='删除'><i class='icon at at_del'></i></a>"
+}, {
+	"modelName": "首页",
+	"paramName": "播放频率（秒）",
+	"key": "rate",
+	"value": "10",
+	"op": "<a class='m-r-sm' title='编辑' href='sys_MGMT_addedit.html'><i class='icon at at_edit'></i></a><a class='demo4 m-r-sm text-danger' href='#' title='删除'><i class='icon at at_del'></i></a>"
+}]

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改密码</title>
+    <link rel="stylesheet" href="plugins/sweetalert/sweetalert.css">
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="webfonts/iconfont/iconfont.css" rel="stylesheet">
+    <link href="plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <style>
+        .login {
+            position: absolute;
+            width: 360px;
+            height: auto;
+            position：absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding:20px 40px 20px 40px;
+            border:solid 1px #eee;
+        }
+        .login label{
+            text-align:left;
+            font-size:13px;
+            padding:0 0 10px 0;
+        }
+        .login button{
+            width:100px;
+        }
+        .login .title{
+            font-size:18px;
+            font-weight: bold;
+            padding-bottom:10px;
+            margin-bottom:20px;
+            border-bottom:solid 1px #ddd;
+        }
+    </style>
+</head>
+
+<body class="gray-bg">
+    <!-- #BeginLibraryItem "/Library/path.lbi" -->
+    <!-- #EndLibraryItem -->
+    <div class="wrapper animated fadeInRight">
+        <div class="row">
+
+            <div class="login">
+                <div class="title">
+                    修改密码 / 首次登录请修改密码
+                </div>
+                <form role="form">
+                    <p class="form-group">
+                        <label class="col-md-4">旧密码：</label>
+                        <input type="password" class="form-control" placeholder="请输入您的旧密码">
+                    </p>
+                    <p class="form-group">
+                        <label class="col-md-4">新密码：</label>
+                        <input type="password" class="form-control" placeholder="请输入新密码">
+                    </p>
+                    <p class="form-group">
+                        <label class="col-md-4">确认密码：</label>
+                        <input type="password" class="form-control" placeholder="再次输入新密码">
+                    </p>
+                    <p class="form-group">
+                        <button class="btn btn-primary" type="submit">确 认</button>
+                        <button class="btn ">取 消</button>
+                    </p>
+                </form>
+            </div>
+            
+            
+        </div>
+    </div>
+    </div>
+    <script src="plugins/jquery.min.js?v=2.1.4"></script>
+    <script src="plugins/bootstrap.min.js?v=3.3.6"></script>
+    <script src="plugins/content.min.js?v=1.0.0"></script>
+    <script src="plugins/jquery-ui-1.10.4.min.js"></script>
+
+    <!--时间控件-->
+    <script src="plugins/layer/laydate/laydate.js"></script>
+    <!--BootstrapTable-->
+    <script src="plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="plugins/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
+    <!-- swwtralert -->
+    <script src="plugins/sweetalert/sweetalert.min.js"></script>
+    <script>
+        $('#tablerule').bootstrapTable({
+            url: "json/bootstrap_table_test3.json",
+            sortable: true, //是否启用排序
+            sortOrder: "asc", //排序方式
+            pagination: true, //是否显示分页
+            pageNumber: 1, //初始化加载第一页，默认第一页
+            pageSize: 5, //每页的记录行数（*）
+            pageList: [5, 10, 15, 100], //可供选择的每页的行数（*）
+            clickToSelect: true //是否启用点击选中行
+        });
+
+        laydate.render({
+            elem: '.range-yearMonthDayHMS',
+            type: 'datetime', //日期时间 可选择：年、月、日、时、分、秒
+            range: true, //控制范围选择的参数
+            format: "yyyy-MM-dd HH:mm:ss", //定义显示样式
+            value: "2018-05-12 10:48:20 - 2018-06-19 10:48:20",
+            theme: 'molv', //设置主题颜色
+            trigger: 'click',
+            change: function (value, date, endDate) {
+                console.log(value); //得到日期生成的值，如：2017-08-18
+                console.log(
+                    date); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+                console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+            }
+        });
+    </script>
+</body>
+
+</html>

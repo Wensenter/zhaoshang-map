@@ -1,0 +1,183 @@
+{
+    "mapCenter":{"lng": 102.837152,"lat": 24.885684},
+    "viewclass": 9,
+    "data":[
+      {
+        "data":{
+          "title":"无锡市",
+          "name":"无锡市",
+          "cityName":"无锡市",
+          "projectSum":16,
+          "projectInfoList":[
+              {
+                  "projectName": "mall",
+                  "projectNum": 7
+              },
+              {
+                  "projectName": "construct",
+                  "projectNum": 3
+              },
+              {
+                  "projectName": "office",
+                  "projectNum": 3
+              },
+              {
+                  "projectName": "community",
+                  "projectNum": 1 
+              },
+              {
+                  "projectName": "other",
+                  "projectNum": 3 
+              }
+          ]
+        }
+      },
+      {
+        "data":{
+          "title":"深圳市",
+          "name":"深圳市",
+          "cityName":"深圳市",
+          "projectSum":16,
+            "projectInfoList":[
+                {
+                    "projectName": "mall",
+                    "projectNum": 7
+                },
+                {
+                    "projectName": "construct",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "office",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "community",
+                    "projectNum": 1 
+                },
+                {
+                    "projectName": "other",
+                    "projectNum": 3 
+                }
+            ]
+        }
+      },
+      {
+        "point":{"lng": 102.837152,"lat": 24.885684},
+        "data":{
+          "title":"云南市",
+          "projectSum":16,
+            "projectInfoList":[
+                {
+                    "projectName": "mall",
+                    "projectNum": 7
+                },
+                {
+                    "projectName": "construct",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "office",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "community",
+                    "projectNum": 1 
+                },
+                {
+                    "projectName": "other",
+                    "projectNum": 3 
+                }
+            ]
+        }
+      },
+      {
+        "point":{"lng": 112.945074,"lat": 28.23603},
+        "data":{
+          "title":"xx市",
+          "projectSum":16,
+            "projectInfoList":[
+                {
+                    "projectName": "mall",
+                    "projectNum": 7
+                },
+                {
+                    "projectName": "construct",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "office",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "community",
+                    "projectNum": 1 
+                },
+                {
+                    "projectName": "other",
+                    "projectNum": 3 
+                }
+            ]
+        }
+      },
+      {
+        "point":{"lng": 108.313555,"lat": 22.877456},
+        "data":{
+          "title":"xx市",
+          "projectSum":16,
+            "projectInfoList":[
+                {
+                    "projectName": "mall",
+                    "projectNum": 7
+                },
+                {
+                    "projectName": "construct",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "office",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "community",
+                    "projectNum": 1 
+                },
+                {
+                    "projectName": "other",
+                    "projectNum": 3 
+                }
+            ]
+        }
+      },
+      {
+        "point":{"lng": 107.313555,"lat": 23.877456},
+        "data":{
+          "title":"xx市",
+          "projectSum":16,
+          "type":"community",
+            "projectInfoList":[
+                {
+                    "projectName": "mall",
+                    "projectNum": 7
+                },
+                {
+                    "projectName": "construct",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "office",
+                    "projectNum": 3
+                },
+                {
+                    "projectName": "community",
+                    "projectNum": 1 
+                },
+                {
+                    "projectName": "other",
+                    "projectNum": 3 
+                }
+            ]
+        }
+      }
+    ]
+  }

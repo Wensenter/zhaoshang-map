@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <title>地图</title>
+    <!-- 百度地图ak  开发需要重新申请 -->
+    <script type="text/javascript" src=" http://api.map.baidu.com/getscript?v=3.0&ak=klqufZeM0gzavL2YlfsYS0U0S0M18WXt&services=&t=20200103103842"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="map" id="map"></div>
+        <!-- 头部 -->
+        <div class="head clear">
+            <span class="time">
+                <i class="time-icon"></i>
+                <span class="time-text"></span>
+            </span>
+            <div class="logo">
+                <img src="img/logo-map.png" alt="">
+                <span class="line"></span>
+                <span>云数据看板</span>
+            </div>
+            <div class="head-right clear">
+                <span>欢迎您,admin</span>
+                <ul>
+                    <li class="item"><a href="#">首页</a></li>
+                    <li class="item"><a href="sys_MGMT_index.html">系统管理</a></li>
+                    <li class="item"><a href="#">海康ISC</a></li>
+                    <li class="item"><a href="javascript:;" onclick="synchro()">摄像头同步</a></li>
+                    <li class="loginout"><a href="#">退出</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 安装提示 -->
+        <div class="install-tip">
+            <i></i>系统检测到您未安装视频插件，请 <a href="#">点击下载</a> 进行安装，安装后请重启浏览器！ 插件暂时只支持windows系统。
+        </div>
+        <!-- 左侧菜单 -->
+        <div class="left-nav">
+            <h3 class="title">
+                项目统计
+            </h3>
+            <ul class="nav-list">
+                <li class="active">
+                    <dl>
+                        <dt class="clear">全部 <span>13</span></dt>
+                        <dd>
+                            <ul>
+                                <li class="name">
+                                    <span class="title">摄像头</span>
+                                    <span class="num">1376</span>
+                                </li>
+                                <li class="unusual">
+                                    <span class="title">异常</span>
+                                    <span class="num">45</span>
+                                </li>
+                                <li class="online">
+                                    <span class="title">在线</span>
+                                    <span class="num">561</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="img/icon_mall.png" alt="">
+                    <dl>
+                        <dt class="clear">商场 <span>13</span></dt>
+                        <dd>
+                            <ul>
+                                <li class="name">
+                                    <span class="title">摄像头</span>
+                                    <span class="num">1376</span>
+                                </li>
+                                <li class="unusual">
+                                    <span class="title">异常</span>
+                                    <span class="num">45</span>
+                                </li>
+                                <li class="online">
+                                    <span class="title">在线</span>
+                                    <span class="num">561</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="img/icon_construct.png" alt="">
+                    <dl>
+                        <dt class="clear">工地 <span>13</span></dt>
+                        <dd>
+                            <ul>
+                                <li class="name">
+                                    <span class="title">摄像头</span>
+                                    <span class="num">1376</span>
+                                </li>
+                                <li class="unusual">
+                                    <span class="title">异常</span>
+                                    <span class="num">45</span>
+                                </li>
+                                <li class="online">
+                                    <span class="title">在线</span>
+                                    <span class="num">561</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="img/icon_office.png" alt="">
+                    <dl>
+                        <dt class="clear">案场 <span>13</span></dt>
+                        <dd>
+                            <ul>
+                                <li class="name">
+                                    <span class="title">摄像头</span>
+                                    <span class="num">1376</span>
+                                </li>
+                                <li class="unusual">
+                                    <span class="title">异常</span>
+                                    <span class="num">45</span>
+                                </li>
+                                <li class="online">
+                                    <span class="title">在线</span>
+                                    <span class="num">561</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="img/icon_community.png" alt="">
+                    <dl>
+                        <dt class="clear">社区 <span>13</span></dt>
+                        <dd>
+                            <ul>
+                                <li class="name">
+                                    <span class="title">摄像头</span>
+                                    <span class="num">1376</span>
+                                </li>
+                                <li class="unusual">
+                                    <span class="title">异常</span>
+                                    <span class="num">45</span>
+                                </li>
+                                <li class="online">
+                                    <span class="title">在线</span>
+                                    <span class="num">561</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <img src="img/icon_other.png" alt="">
+                    <dl>
+                        <dt class="clear">其他 <span>13</span></dt>
+                        <dd>
+                            <ul>
+                                <li class="name">
+                                    <span class="title">摄像头</span>
+                                    <span class="num">1376</span>
+                                </li>
+                                <li class="unusual">
+                                    <span class="title">异常</span>
+                                    <span class="num">45</span>
+                                </li>
+                                <li class="online">
+                                    <span class="title">在线</span>
+                                    <span class="num">561</span>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <!-- 区域标题 -->
+        <div class="map-title">
+            <div>
+                <span class="view class-1">
+                    <span class="view-name">全国视图</span>
+                </span>
+                <span class="view class-2">
+                    <span class="label">></span>
+                    <span class="view-name">区域视图</span>
+                </span>
+                <span class="view class-3">
+                    <span class="label">></span>
+                    <span class="view-name">深圳</span>
+                </span>
+            </div>
+            <div class="main-title">XXXX小区</div>
+        </div>
+        <!-- 搜索组件 -->
+        <div class="search">
+            <div class="search-box">
+                <img src="img/icon_search.png" alt="" class="search-icon">
+                <input type="text" placeholder="地名/项目名搜索摄像头" oninput="handleSearchActive(this)">
+                <img src="img/icon_close.png" alt="" class="close-icon" onclick="handleCloseSearch(this)">
+                <button class="search-btn" onclick="getVideoResult()">搜索</button>
+            </div>
+            <div class="search-result" style="display: none;">
+                <div class="search-tab-nav">
+                    <ul>
+                        <li class="active">区域(1)</li>
+                        <li>城市(12)</li>
+                        <li>项目(99)</li>
+                        <li>摄像头(999)</li>
+                    </ul>
+                </div>
+                <div class="search-tab-content">
+                    <div class="tab0 active">
+                        <ul class="address">
+                            <li onclick="fixedPos({lng: 125.684555,lat: 43.855417},5)">
+                                <img src="img/icon_pos.png" alt="">
+                                西南区域
+                            </li>
+                            <li onclick="fixedPos({lng: 113.910285,lat: 34.057525},5)">
+                                <img src="img/icon_pos.png" alt="">
+                                东西区域
+                            </li>
+                            <li onclick="fixedPos({lng: 118.693582,lat: 32.200036},5)">
+                                <img src="img/icon_pos.png" alt="">
+                                华中区域
+                            </li>
+                            <li onclick="fixedPos({lng: 118.693582,lat: 32.200036},5)">
+                                <img src="img/icon_pos.png" alt="">
+                                华南区域
+                            </li>
+                            <li onclick="fixedPos({lng: 125.684555,lat: 43.855417},5)">
+                                <img src="img/icon_pos.png" alt="">
+                                西南区域
+                            </li>
+                            <li onclick="fixedPos({lng: 113.910285,lat: 34.057525},5)">
+                                <img src="img/icon_pos.png" alt="">
+                                东西区域
+                            </li>
+                            <li onclick="fixedPos({lng: 118.693582,lat: 32.200036},5)">
+                                <img src="img/icon_pos.png" alt="">
+                                华中区域
+                            </li>
+                            <li onclick="fixedPos({lng: 118.693582,lat: 32.200036},5)">
+                                <img src="img/icon_pos.png" alt="">
+                                华南区域
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab1">
+                        <ul class="address">
+                            <li onclick="fixedPos({lng: 102.837152,lat: 24.885684},7)">
+                                <img src="img/icon_pos.png" alt="">
+                                城市1
+                            </li>
+                            <li onclick="fixedPos({lng: 102.837152,lat: 24.885684},7)">
+                                <img src="img/icon_pos.png" alt="">
+                                城市2
+                            </li>
+                            <li onclick="fixedPos({lng: 102.837152,lat: 24.885684},7)">
+                                <img src="img/icon_pos.png" alt="">
+                                城市3
+                            </li>
+                            <li onclick="fixedPos({lng: 102.837152,lat: 24.885684},7)">
+                                <img src="img/icon_pos.png" alt="">
+                                城市4
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab2">
+                        <ul class="address">
+                            <li onclick="fixedPos({lng: 117.321915,lat: 31.890172},11)">
+                                <img src="img/icon_pos.png" alt="">
+                                项目1
+                            </li>
+                            <li onclick="fixedPos({lng: 117.321915,lat: 31.890172},11)">
+                                <img src="img/icon_pos.png" alt="">
+                                项目2
+                            </li>
+                            <li onclick="fixedPos({lng: 117.321915,lat: 31.890172},11)">
+                                <img src="img/icon_pos.png" alt="">
+                                项目3
+                            </li>
+                            <li onclick="fixedPos({lng: 117.321915,lat: 31.890172},11)">
+                                <img src="img/icon_pos.png" alt="">
+                                项目4
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab3">
+                        <div class="swiper-head clear">
+                            <div class="left">
+                                <a href="javascript:;" class="active" onclick="checkoutVideo(this)">
+                                    <img src="img/icon_1x1.png" alt="">
+                                </a>
+                                <a href="javascript:;" onclick="checkoutVideo(this)">
+                                    <img src="img/icon_2x2.png" alt="">
+                                </a>
+                                <a href="javascript:;" onclick="checkoutVideo(this)">
+                                    <img src="img/icon_3x3.png" alt="">
+                                </a>
+                            </div>
+                            <div class="pagination">
+                                <span>1</span>/ <span>13</span>
+                            </div>
+                        </div>
+                        <div class="swiper-body">
+                            <!-- <div class="video-swiper swiper-container">
+                                <div class="swiper-wrapper">
+                                   
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div> -->
+                            <div class="video-box">
+                                视频区域
+                            </div>
+                            <div class="prev-btn">
+                                <i class="fas fa-angle-left"></i>
+                            </div>
+                            <div class="next-btn">
+                                <i class="fas fa-angle-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 摄像头右键菜单 -->
+        <div class="video-right-menu">
+            <ul>
+                <li onclick="editVideo()">
+                    <img src="img/icon_move.png" alt="">
+                    编辑摄像头
+                </li>
+                <li onclick="addVideo()">
+                    <img src="img/icon_add.png" alt="">
+                    添加摄像头
+                </li>
+            </ul>
+        </div>
+        <!-- 摄像头添加框 -->
+        <div class="add-video">
+            <div class="head">
+                <p>添加摄像头</p>
+                <img src="img/icon_close.png" alt="" class="close-btn" onclick="addVideoClose()">
+            </div>
+            <div class="body">
+                <form>
+                    <div class="input-box">
+                        <img src="img/icon_search.png" alt="">
+                        <input type="text" placeholder="输入名称搜索摄像头">
+                    </div>
+                    <button type="button" class="search-btn">查询</button>
+                    <button type="button" class="all-select-btn" onclick="selectAllItem(4)">全选</button>
+                </form>
+                <div class="tab">
+                    <div class="tab-nav">
+                        <ul>
+                            <li class="active"><span>全部</span></li>
+                            <li><span>深圳市某商场购物中心二期项目</span></li>
+                            <li><span>深圳市某商场购物中心二期项目</span></li>
+                            <li><span>深圳市某商场一期项目</span></li>
+                            <li><span>深圳市某购物中心二期项目</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <ul>
+                            <li dataId="1">
+                                <span class="checkbox"></span>
+                                <span class="item-name">摄像头名称1</span>
+                            </li>
+                            <li dataId="2">
+                                <span class="checkbox"></span>
+                                <span class="item-name">摄像头名称2</span>
+                            </li>
+                            <li dataId="3">
+                                <span class="checkbox"></span>
+                                <span class="item-name">摄像头名称3</span>
+                            </li>
+                            <li dataId="4">
+                                <span class="checkbox"></span>
+                                <span class="item-name">摄像头名称4</span>
+                            </li>
+                            <li dataId="5">
+                                <span class="checkbox"></span>
+                                <span class="item-name">摄像头名称5</span>
+                            </li>
+                            <li dataId="6">
+                                <span class="checkbox"></span>
+                                <span class="item-name">摄像头名称6</span>
+                            </li>
+                            <li dataId="7">
+                                <span class="checkbox"></span>
+                                <span class="item-name">摄像头名称7</span>
+                            </li>
+                            <li dataId="8">
+                                <span class="checkbox"></span>
+                                <span class="item-name">摄像头名称8</span>
+                            </li>
+                            <li dataId="9">
+                                <span class="checkbox"></span>
+                                <span class="item-name">摄像头名称9</span>
+                            </li>
+                            <li dataId="10">
+                                <span class="checkbox"></span>
+                                <span class="item-name">摄像头名称10</span>
+                            </li>
+                        </ul>
+                        <div class="pageNum">
+                            <p>
+                                <span class="prev-btn"><</span>
+                                <span class="cur">1</span>/<span class="sum">3</span>
+                                <span class="next-btn">></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 项目右键菜单 -->
+        <div class="project-right-menu">
+            <ul>
+                <li onclick="editProject()">
+                    <img src="img/icon_move.png" alt="">
+                    编辑项目
+                </li>
+                <li onclick="addProject()">
+                    <img src="img/icon_add.png" alt="">
+                    添加项目
+                </li>
+            </ul>
+        </div>
+        <!-- 项目添加框 -->
+        <div class="add-project">
+            <div class="head">
+                <p>添加项目</p>
+                <img src="img/icon_close.png" alt="" class="close-btn" onclick="addVideoClose()">
+            </div>
+            <div class="body">
+                <form>
+                    <div class="input-box">
+                        <img src="img/icon_search.png" alt="">
+                        <input type="text" placeholder="输入名称搜索摄像头">
+                    </div>
+                    <button type="button" class="search-btn">查询</button>
+                    <button type="button" class="all-select-btn" onclick="selectAllItem(5)">全选</button>
+                </form>
+                <div class="tab">
+                    <div class="tab-content">
+                        <ul>
+                            <li dataId="1">
+                                <span class="checkbox"></span>
+                                <span class="item-name">项目1</span>
+                            </li>
+                            <li dataId="2">
+                                <span class="checkbox"></span>
+                                <span class="item-name">项目2</span>
+                            </li>
+                            <li dataId="3">
+                                <span class="checkbox"></span>
+                                <span class="item-name">项目3</span>
+                            </li>
+                            <li dataId="4">
+                                <span class="checkbox"></span>
+                                <span class="item-name">项目4</span>
+                            </li>
+                            <li dataId="5">
+                                <span class="checkbox"></span>
+                                <span class="item-name">项目5</span>
+                            </li>
+                            <li dataId="6">
+                                <span class="checkbox"></span>
+                                <span class="item-name">项目6</span>
+                            </li>
+                            <li dataId="7">
+                                <span class="checkbox"></span>
+                                <span class="item-name">项目7</span>
+                            </li>
+                            <li dataId="8">
+                                <span class="checkbox"></span>
+                                <span class="item-name">项目8</span>
+                            </li>
+                            <li dataId="9">
+                                <span class="checkbox"></span>
+                                <span class="item-name">项目9</span>
+                            </li>
+                            <li dataId="10">
+                                <span class="checkbox"></span>
+                                <span class="item-name">项目10</span>
+                            </li>
+                        </ul>
+                        <div class="pageNum">
+                            <p>
+                                <span class="prev-btn"><</span>
+                                <span class="cur">1</span>/<span class="sum">3</span>
+                                <span class="next-btn">></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 编辑确认框 -->
+        <div class="edit-confirm">
+            <img src="img/icon_warning.png" alt="">
+            <span>您正在编辑项目，完成后请及时保存</span>
+            <button class="sure" onclick="videoSave()">保存</button>
+            <button class="cancle" onclick="videoCancle()">取消</button>
+        </div>
+        <!-- 视频弹窗 -->
+        <div class="videoPop">
+            <div class="head">
+                <span class="title">监控画面</span>
+                <img src="img/icon_close.png" alt="" onclick="closeVideo()">
+            </div>
+            <div class="body">
+                <div class="video"></div>
+            </div>
+        </div>
+        <!-- 信息弹出框 -->
+        <div class="comfirmPop" id="comfirm">
+            <div class="head">
+                <span class="title">监控画面</span>
+                <img src="img/icon_close.png" alt="" onclick="closeVideo()">
+            </div>
+            <div class="body">
+                <p class="text">请确认是否手动重新同步设备信息?</p>
+                <div class="op">
+                    <button type="button" onclick="sure()">确定</button>
+                    <button type="button" onclick="cancle()">取消</button>
+                </div>
+            </div>
+        </div>
+        <!-- 弹出确认框 -->
+        <div class="comfirmPop" id="comfirmSure">
+            <div class="head">
+                <span class="title">监控画面</span>
+                <img src="img/icon_close.png" alt="" onclick="closeVideo()">
+            </div>
+            <div class="body">
+                <p class="text">设备同步更新成功</p>
+                <div class="op">
+                    <button type="button" onclick="comfirmSure()">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="plugins/jquery.min.js"></script>
+    <script src="plugins/swiper.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

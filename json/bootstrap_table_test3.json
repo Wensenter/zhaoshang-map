@@ -1,0 +1,23 @@
+[{
+	"username": "fangjl",
+	"realName": "fangjl",
+    "IP": "192.168.4.202:63938",
+    "serverName":"192.168.5.200",
+	"opType": "登录",
+    "opDes":"id-131966-ddddd",
+    "opDetail":"2019-03-19 08:47:06"
+}, {
+	"username": "fangjl",
+	"realName": "fangjl",
+    "IP": "192.168.4.202:63938",
+    "serverName":"192.168.5.200",
+	"opType": "退出",
+    "opDetail":"2019-03-19 08:47:06"
+}, {
+	"username": "fangjl",
+    "realName": "fangjl",
+    "serverName":"192.168.5.200",
+	"IP": "192.168.4.202:63938",
+	"opType": "退出",
+    "opDetail":"2019-03-19 08:47:06"
+}]

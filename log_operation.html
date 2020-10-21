@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>操作日志</title>
+<link rel="stylesheet" href="plugins/sweetalert/sweetalert.css">
+<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="webfonts/iconfont/iconfont.css" rel="stylesheet">
+<link href="plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+</head>
+<body class="gray-bg"><!-- #BeginLibraryItem "/Library/path.lbi" -->
+ <div class="row wrapper page-heading">
+  <div class="col-md-12">
+	  <p class="text-muted"><i class="fas fa-map-marker-alt text-primary"></i> 当前位置：操作日志 &gt;</p>
+  </div>
+</div>  <!-- #EndLibraryItem --><div class="wrapper animated fadeInRight">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="ibox">
+        <div class="ibox-content">
+          <form role="form" class="form-inline">
+            <div class="form-group m-r-sm">
+              <label>用户名</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group m-r-sm">
+                <label>操作类型</label>
+                <select class="form-control">
+                  <option>请选择</option>
+                  <option>新增</option>
+                  <option>修改</option>
+                  <option>删除</option>
+                  <option>查询</option>
+                </select>
+            </div>
+            <div class="form-group m-r-sm">
+              <label>操作时间</label>
+              <input class="form-control range-yearMonthDayHMS" style="width: 280px;">
+            </div>
+            <div class="checkbox pull-right">
+              <button class="btn btn-primary" type="submit">查询</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="ibox ">
+        <div class="ibox-content">
+          <div class="text-right">
+            <table id="tablerule" data-sort-order="asc" class="text-left">
+              <thead>
+                <tr>
+                    <th data-field="modelName">模块名称</th>
+                    <th data-field="username">用户名</th>
+                    <th data-field="realName">真实姓名</th>
+                    <th data-field="IP">用户IP及端口号</th>
+                    <th data-field="opType">操作类型</th>
+                    <th data-field="opTime">操作时间</th>
+                    <th data-field="opDes">操作描述</th>
+                    <th data-field="opDetail">数据详情</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="plugins/jquery.min.js?v=2.1.4"></script> 
+<script src="plugins/bootstrap.min.js?v=3.3.6"></script> 
+<script src="plugins/content.min.js?v=1.0.0"></script> 
+<script src="plugins/jquery-ui-1.10.4.min.js"></script> 
+
+<!--时间控件--> 
+<script src="plugins/layer/laydate/laydate.js"></script> 
+<!--BootstrapTable--> 
+<script src="plugins/bootstrap-table/bootstrap-table.min.js"></script> 
+<script src="plugins/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
+<!-- swwtralert -->
+<script src="plugins/sweetalert/sweetalert.min.js"></script>
+<script>
+        $('#tablerule').bootstrapTable({
+            url: "json/bootstrap_table_test2.json",
+                sortable: true, //是否启用排序
+                sortOrder: "asc", //排序方式
+                pagination: true, //是否显示分页
+                pageNumber: 1, //初始化加载第一页，默认第一页
+                pageSize: 5, //每页的记录行数（*）
+                pageList: [5, 10, 15, 100], //可供选择的每页的行数（*）
+                clickToSelect: true, //是否启用点击选中行
+                onLoadSuccess: function() {
+                //表格数据加载成功后，调用如下方法
+                  //sweetalert-warning 告警信息
+                  $(".demo1").click(function(event) {
+                      event = event || window.event; //阻止冒泡
+                      event.stopPropagation();
+                      swal({
+                        customClass: 'swal-info',
+                        promptMessage: "详情", //标题的提示文字
+                        title: " ",
+                        text: '{"allocationUnit":"tzj008888","areaCode":"331100","areaCodeValidateType":1,"areaCodes":"","authFilter":false,"authHouses":"","authIdentities":"","cityCodeList":[],"createTime":1552894185000,"createUserId":1640,"czlx":2,"dealFlag":0,"delFlag":0,"endIP":"1.2.1.2","endIPStr":"16908546","houseId":5907,"houseName":"house_a_name","idNumber":"s32652123","idType":7,"ipSegId":1459041,"ipType":1,"isCount":1,"isPaging":1,"pageIndex":1,"pageSize":10,"sourceUnit":"tzj008888","startIP":"1.2.1.2","startIPStr":"16908546","successFlag":0,"updateTime":1552896823000,"updateUserId":1640,"useTime":"2019-03-18","userAuthHouseList":[],"userAuthIdentityList":[],"userName":"ccccccc"}',
+                        showCancelButton: true,
+                        confirmButtonColor: "#1777ed",
+                        confirmButtonText: "确定",
+                        cancelButtonText: "取消",
+                        closeOnConfirm: false,
+                        closeOnCancel: false
+                      })
+                  });
+                }
+            });
+
+        laydate.render({
+            elem: '.range-yearMonthDayHMS',
+            type: 'datetime', //日期时间 可选择：年、月、日、时、分、秒
+            range: true, //控制范围选择的参数
+            format: "yyyy-MM-dd HH:mm:ss", //定义显示样式
+            value: "2018-05-12 10:48:20 - 2018-06-19 10:48:20",
+            theme: 'molv', //设置主题颜色
+            trigger: 'click',
+            change: function(value, date, endDate) {
+                console.log(value); //得到日期生成的值，如：2017-08-18
+                console.log(date); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+                console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+            }
+        });
+</script>
+</body>
+</html>

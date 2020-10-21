@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>系统管理</title>
+<link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="webfonts/iconfont/iconfont.css" rel="stylesheet">
+<link href="plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+<link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+<link rel="stylesheet" href="plugins/sweetalert/sweetalert.css">
+</head>
+<body class="gray-bg"><!-- #BeginLibraryItem "/Library/path.lbi" -->
+ <div class="row wrapper page-heading">
+  <div class="col-md-12">
+	  <p class="text-muted"><i class="fas fa-map-marker-alt text-primary"></i> 当前位置：系统管理 &gt;</p>
+  </div>
+</div>  <!-- #EndLibraryItem --><div class="wrapper animated fadeInRight">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="ibox">
+        <div class="ibox-content">
+          <form role="form" class="form-inline">
+            <div class="form-group m-r-sm">
+              <label>参数名称</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group m-r-sm">
+              <label>key值</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group m-r-sm">
+              <label>value值</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="checkbox pull-right">
+              <button class="btn btn-primary" type="submit">查询</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="ibox ">
+        <div class="ibox-content">
+          <div class="text-right">
+            <p id="exampleToolbar"> <a name="button" type="button" class="btn btn-primary" href="sys_MGMT_addedit.html">新增</a> <a type="button" class="demo4 btn btn-danger">批量删除</a>
+            </p>
+            <table id="tablerule" data-sort-order="asc" class="text-left">
+              <thead>
+                <tr>
+                    <th data-field="checkbox" data-checkbox="true"></th>
+                    <th data-field="modelName">所属模块</th>
+                    <th data-field="paramName">参数名称</th>
+                    <th data-field="key">key值</th>
+                    <th data-field="value">value值</th>
+                    <th data-field="op">操作</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="plugins/jquery.min.js?v=2.1.4"></script> 
+<script src="plugins/bootstrap.min.js?v=3.3.6"></script> 
+<script src="plugins/content.min.js?v=1.0.0"></script> 
+<script src="plugins/jquery-ui-1.10.4.min.js"></script> 
+
+<!--时间控件--> 
+<script src="plugins/layer/laydate/laydate.js"></script> 
+<!--BootstrapTable--> 
+<script src="plugins/bootstrap-table/bootstrap-table.min.js"></script> 
+<script src="plugins/bootstrap-table/bootstrap-table-zh-CN.min.js"></script>
+<!-- swwtralert -->
+<script src="plugins/sweetalert/sweetalert.min.js"></script>
+<script>
+        $('#tablerule').bootstrapTable({
+            url: "json/bootstrap_table_test1.json",
+                sortable: true, //是否启用排序
+                sortOrder: "asc", //排序方式
+                pagination: true, //是否显示分页
+                pageNumber: 1, //初始化加载第一页，默认第一页
+                pageSize: 5, //每页的记录行数（*）
+                pageList: [5, 10, 15, 100], //可供选择的每页的行数（*）
+                clickToSelect: true, //是否启用点击选中行
+                onLoadSuccess: function() {
+                //表格数据加载成功后，调用如下方法
+                  //sweetalert-warning 告警信息
+                  $(".demo4").click(function(event) {
+                      event = event || window.event; //阻止冒泡
+                      event.stopPropagation();
+                      swal({
+                          promptMessage: " 删除信息", //标题的提示文字
+                          title: "确定要删除这条信息吗",
+                          text: "删除后将无法恢复，请谨慎操作！",
+                          type: "warning",
+                          showCancelButton: true,
+                      confirmButtonColor: "#1777ed",
+                          confirmButtonText: "确定",
+                          cancelButtonText: "取消",
+                          closeOnConfirm: false,
+                          closeOnCancel: false
+                      },function(isConfirm) {
+                                    if(isConfirm) {
+                                        //表格中的删除操作
+                                        var result = $('#tablerule').bootstrapTable('getSelections'); //获取表格的所有内容行  
+                                        var ids = [];
+                                        for(var i = 0; i < result.length; i++) {
+                                            var item = result[i];
+                                            $('#tablerule>tbody>tr').remove('.selected')
+                                            ids.push(item.name);
+                                        }
+                                        $("#tablerule>tbody>.hidetr").remove();
+                                        swal({promptMessage:'删除信息',title:"删除成功！",text:"已经永久删除了这条记录。",type:"success"})
+                                    } else {
+                                        swal({promptMessage:'删除信息',title:"已取消",type:"error"})
+                                    }
+                                })
+                  });
+                }
+            });
+</script>
+</body>
+</html>
